@@ -1,0 +1,44 @@
+package abstraction;
+
+public class First {
+
+	public static void main(String[] args) {
+		Animal animal=new Elephant();
+		Animal animal2=new cheetah();
+		
+		animal.eat("grass");
+		animal2.eat("meat");
+		
+
+	}
+
+}
+abstract class Animal{
+	private String name="skd";
+	public void run() {
+		System.out.println("running");
+	}
+	abstract void eat(String eat); // incomplete method
+	// Private abstract methods are not possible in abstract class.
+		 public Animal()
+		 {
+			 System.out.println("hello");
+		 }
+}
+class Elephant extends Animal{
+	
+	void eat(String str) {
+		System.out.println("Elephant is eating:"+ str);
+	}
+//	 public void run()
+//		{
+//			System.out.println("run fast...");
+//		}
+} 
+
+
+class cheetah extends Animal{
+	void eat(String str) {
+		System.out.println("chetah is eating:"+str);
+	}
+}
