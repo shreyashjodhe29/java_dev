@@ -16,6 +16,8 @@ public class Third {
 		 Predicate<String> p3=pred.and(pred2);
 		    
 		    System.out.println(p3.test("aaaaaa"));
+		    Predicate<String> p=Predicate.isEqual("um");
+		    System.out.println(p.test("um"));
 
 	}
 
